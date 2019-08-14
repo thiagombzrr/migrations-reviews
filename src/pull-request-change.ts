@@ -1,7 +1,8 @@
 import {Context} from "probot";
 
 export async function handlePullRequestChange (context: Context) {
-    let config: any = await context.config('minimum-reviews.yml')
+    context.log("Cheguei aqui")
+    let config: any = await context.config('migrations-reviews.yml')
 
     if (!config) {
         context.log('%s missing configuration file', context.payload.repository.full_name)
@@ -20,7 +21,7 @@ export async function handlePullRequestChange (context: Context) {
         sha: pullRequest.head.sha,
         state: state,
         description: description,
-        context: 'probot/minimum-reviews'
+        context: 'probot/migrations-reviews'
     }))
 }
 
