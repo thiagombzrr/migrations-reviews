@@ -21,7 +21,7 @@ export async function handlePullRequestChange (context: Context) {
     context.log("Enviando status: " + state)
     return context.github.repos.createStatus(context.repo({
         sha: pullRequest.head.sha,
-        state: "pending",
+        state: "error",
         description: "Pending review approvals",
         context: 'probot/migrations-reviews'
     }))
