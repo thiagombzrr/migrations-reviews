@@ -1,6 +1,6 @@
-# {{ name }}
+# Migrations Reviews
 
-> A GitHub App built with [Probot](https://github.com/probot/probot) that {{ description }}
+> A GitHub App built with [Probot](https://github.com/probot/probot) that make sure that migrations are reviewed/approved only by dba team
 
 ## Setup
 
